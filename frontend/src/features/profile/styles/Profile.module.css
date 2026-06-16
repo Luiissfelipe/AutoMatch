@@ -1,0 +1,517 @@
+.pageLayout {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  animation: var(--motion-page-enter);
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  animation: var(--motion-surface-enter);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(17, 42, 70, 0.1);
+  border-left-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: var(--motion-interactive);
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+  transform: translateX(-2px);
+}
+
+.profileHeader {
+  margin-bottom: 2rem;
+  animation: var(--motion-surface-enter);
+}
+
+.avatarSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatarBig {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+}
+
+.avatarSection h1 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.roleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #E2E8F0;
+  color: var(--color-primary);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tabsNav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  background-color: #EEF2F7;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 9px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--motion-interactive);
+  white-space: nowrap;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.tabButton:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.activeTab {
+  color: var(--color-accent) !important;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.settingsCard {
+  background-color: var(--color-bg-card);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(17, 42, 70, 0.04);
+  border: 1px solid rgba(17, 42, 70, 0.05);
+  animation: var(--motion-surface-enter);
+}
+
+.settingsCard h2 {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sectionDescription {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.successMessage {
+  background-color: #ECFDF5;
+  color: #047857;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  border: 1px solid #A7F3D0;
+  text-align: center;
+  animation: var(--motion-list-enter);
+}
+
+.errorMessage {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  border: 1px solid #FECACA;
+  text-align: center;
+  animation: var(--motion-list-enter);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.75rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-primary);
+  transition: var(--motion-interactive);
+}
+
+.inputWrapper input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.1);
+}
+
+.inputDisabled input {
+  background-color: #F8FAFC;
+  color: #94A3B8;
+  cursor: not-allowed;
+}
+
+.sellerToggleSection {
+  margin-top: 1rem;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  animation: var(--motion-list-enter);
+  transition: var(--motion-interactive);
+}
+
+@media (max-width: 640px) {
+  .sellerToggleSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+.sellerToggleInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.sellerIcon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.sellerToggleInfo h3 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.sellerToggleInfo p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sellerToggleInfo strong {
+  color: var(--color-primary);
+}
+
+.toggleSellerButton {
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  border: 1px solid #CBD5E1;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--motion-interactive);
+}
+
+.toggleSellerButton:hover {
+  border-color: var(--color-primary);
+  background-color: #F1F5F9;
+  transform: translateY(-1px);
+}
+
+.saveButton {
+  margin-top: 1rem;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: var(--motion-interactive);
+}
+
+.saveButton:hover:not(:disabled) {
+  background-color: #E65C00;
+  transform: translateY(-2px);
+}
+
+.saveButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.emptyState {
+  background-color: var(--color-bg-card);
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px dashed #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: var(--motion-surface-enter);
+}
+
+.emptyState h3 {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+}
+
+.emptyState p {
+  color: var(--color-text-secondary);
+}
+
+/* Estilos da Lista de Anúncios */
+.adList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.adListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: var(--color-bg-card, #FFFFFF);
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  transition: var(--motion-interactive);
+  animation: var(--motion-list-enter);
+}
+
+.adListItem:hover {
+  box-shadow: 0 4px 12px rgba(17, 42, 70, 0.05);
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+}
+
+.adListTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.carName {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  transition: var(--motion-interactive);
+}
+
+.adListTitle:hover .carName {
+  color: var(--color-accent);
+}
+
+.carInfo {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.adListActions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: var(--color-text-secondary);
+  border-radius: 6px;
+  transition: var(--motion-interactive);
+}
+
+.editButton:hover {
+  background-color: #F1F5F9;
+  color: var(--color-primary);
+}
+
+.deleteButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #EF4444; /* Vermelho */
+  border: 1px solid transparent;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--motion-interactive);
+}
+
+.deleteButton:hover {
+  background-color: #FEF2F2;
+  border-color: #FECACA;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+  }
+
+  .avatarSection {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .avatarBig {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  .avatarSection h1 {
+    font-size: 1.5rem;
+  }
+
+  .tabsNav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
+    overflow: visible;
+  }
+
+  .tabButton {
+    padding: 0.75rem 0.45rem;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    white-space: normal;
+    line-height: 1.15;
+  }
+
+  .tabButton svg {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+  }
+
+  .settingsCard {
+    padding: 1.25rem;
+  }
+
+  .adListItem {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .adListActions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+

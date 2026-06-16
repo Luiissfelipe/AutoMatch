@@ -1,0 +1,270 @@
+.layout {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  display: flex;
+  flex-direction: column;
+  animation: var(--motion-page-enter);
+}
+
+.mainContainer {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  animation: var(--motion-surface-enter);
+}
+
+.loadingContainer {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(17, 42, 70, 0.1);
+  border-left-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: var(--motion-interactive);
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+  transform: translateX(-2px);
+}
+
+.successBanner,
+.errorBanner {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  animation: var(--motion-list-enter);
+}
+
+.successBanner {
+  background-color: #ECFDF5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+
+.errorBanner {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FECACA;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mediaCard,
+.formCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid rgba(17, 42, 70, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(17, 42, 70, 0.05);
+  animation: var(--motion-surface-enter);
+}
+
+.mediaCard {
+  padding: 1.25rem;
+}
+
+.formCard {
+  padding: 1.25rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h1 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.sectionHeader p {
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.mainImage {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  min-height: 260px;
+  max-height: 360px;
+  background-color: #E2E8F0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  font-weight: 600;
+  font-size: 1.1rem;
+  overflow: hidden;
+  transition: filter var(--motion-duration-slow) var(--motion-ease-standard);
+}
+
+.carImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--motion-duration-slow) var(--motion-ease-standard);
+}
+
+.mainImage:hover .carImage {
+  transform: scale(1.02);
+}
+
+.imageGrayscale {
+  filter: grayscale(100%) opacity(0.8);
+}
+
+.imageInputWrapper {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #F8FAFC;
+  border: 1px dashed #CBD5E1;
+  border-radius: 12px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.primaryFieldsGrid,
+.secondaryFieldsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.statusSection {
+  min-width: 0;
+}
+
+.sectionLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.statusDisplay {
+  min-height: 47px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #F8FAFC;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+}
+
+.statusDisplay strong {
+  color: var(--color-primary);
+  flex-grow: 1;
+}
+
+.markSoldButton {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FECACA;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--motion-interactive);
+}
+
+.markSoldButton:hover {
+  background-color: #FEE2E2;
+  transform: translateY(-1px);
+}
+
+.actionButtons {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #E2E8F0;
+}
+
+.primaryActionButton {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+}
+
+.primaryActionButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.3);
+}
+
+@media (max-width: 760px) {
+  .mainContainer {
+    padding: 1rem;
+  }
+
+  .mediaCard,
+  .formCard {
+    padding: 1rem;
+  }
+
+  .mainImage {
+    aspect-ratio: 4 / 3;
+    min-height: 220px;
+  }
+
+  .primaryFieldsGrid,
+  .secondaryFieldsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statusDisplay {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

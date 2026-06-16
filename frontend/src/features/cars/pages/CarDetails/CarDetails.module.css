@@ -1,0 +1,331 @@
+.layout {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  display: flex;
+  flex-direction: column;
+  animation: var(--motion-page-enter);
+}
+
+.mainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  animation: var(--motion-surface-enter);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(17, 42, 70, 0.1);
+  border-left-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: var(--motion-interactive);
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+  transform: translateX(-2px);
+}
+
+.soldBanner {
+  background-color: #FEF2F2;
+  border: 1px solid #F87171;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: var(--motion-list-enter);
+}
+
+.soldText h3 {
+  color: #B91C1C;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.soldText p {
+  color: #991B1B;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background-color: var(--color-bg-card);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(17, 42, 70, 0.05);
+  overflow: hidden;
+  animation: var(--motion-surface-enter);
+}
+
+@media (min-width: 992px) {
+  .contentGrid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.imageSection {
+  padding: 1.5rem;
+  background-color: #F8FAFC;
+}
+
+.mainImage {
+  width: 100%;
+  height: 400px;
+  background-color: #E2E8F0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: filter var(--motion-duration-slow) var(--motion-ease-standard);
+  overflow: hidden;
+}
+
+.carImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--motion-duration-slow) var(--motion-ease-standard);
+}
+
+.mainImage:hover .carImage {
+  transform: scale(1.02);
+}
+
+.imageGrayscale {
+  filter: grayscale(100%) opacity(0.8);
+}
+
+.infoSection {
+  padding: 2rem 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 991px) {
+  .infoSection {
+    padding: 0 1.5rem 2rem 1.5rem;
+  }
+}
+
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.headerInfo h1 {
+  font-size: 2rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.favoriteButton {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: var(--motion-interactive);
+}
+
+.favoriteButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.favoriteButton:active {
+  transform: scale(0.95);
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin: 1rem 0 2rem 0;
+}
+
+.featuresList {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.featureIcon {
+  color: var(--color-primary);
+}
+
+.featureItem span {
+  font-size: 1rem;
+}
+
+.featureItem strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.tagsContainer h3, .descriptionBox h3 {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.tagsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-bg-page);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(17, 42, 70, 0.1);
+  animation: var(--motion-list-enter);
+  transition: var(--motion-interactive);
+}
+
+.tag:hover {
+  transform: translateY(-1px);
+  border-color: #CBD5E1;
+}
+
+.descriptionBox p {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.primaryActionButton {
+  margin-top: auto;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border: none;
+  padding: 1.25rem;
+  border-radius: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: var(--motion-interactive);
+  box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+}
+
+.primaryActionButton:hover:not(:disabled) {
+  background-color: #E65C00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 102, 0, 0.3);
+}
+
+.primaryActionButton:disabled {
+  background-color: #E2E8F0;
+  color: #94A3B8;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 1rem;
+  }
+
+  .soldBanner {
+    padding: 1rem;
+  }
+
+  .imageSection {
+    padding: 1rem;
+  }
+
+  .mainImage {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .infoSection {
+    padding: 0 1rem 1rem;
+  }
+
+  .headerInfo h1 {
+    font-size: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .featuresList {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

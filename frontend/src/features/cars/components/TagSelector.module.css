@@ -1,0 +1,183 @@
+.selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.9rem;
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  animation: var(--motion-surface-enter);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.label {
+  display: block;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.helper {
+  display: block;
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 0.8rem;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  color: var(--color-text-secondary);
+  transition: var(--motion-interactive);
+}
+
+.searchBox:focus-within {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.1);
+  color: var(--color-accent);
+}
+
+.searchBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+
+.selectedRail {
+  display: flex;
+  gap: 0.45rem;
+  min-height: 35px;
+  max-height: 70px;
+  overflow-y: auto;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0.25rem;
+  border-radius: 8px;
+  background-color: #F8FAFC;
+}
+
+.selectedRail::-webkit-scrollbar,
+.optionsPanel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.selectedRail::-webkit-scrollbar-thumb,
+.optionsPanel::-webkit-scrollbar-thumb {
+  background-color: #CBD5E1;
+  border-radius: 999px;
+}
+
+.placeholder {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  padding: 0.45rem 0.35rem;
+}
+
+.selectedChip,
+.optionChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 30px;
+  border-radius: 999px;
+  border: 1px solid #E2E8F0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: var(--motion-interactive);
+  white-space: nowrap;
+}
+
+.selectedChip {
+  padding: 0.35rem 0.55rem 0.35rem 0.7rem;
+  background-color: rgba(255, 102, 0, 0.1);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.selectedChip:hover {
+  background-color: rgba(255, 102, 0, 0.16);
+  transform: translateY(-1px);
+}
+
+.optionsPanel {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.categoryGroup {
+  padding-bottom: 0.6rem;
+  animation: var(--motion-list-enter);
+}
+
+.categoryGroup:not(:last-child) {
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.categoryTitle {
+  color: #94A3B8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.optionGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.optionChip {
+  padding: 0.35rem 0.75rem;
+  background-color: #FFFFFF;
+  color: #475569;
+}
+
+.optionChip:hover {
+  border-color: #CBD5E1;
+  background-color: #F8FAFC;
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.optionChipSelected {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(255, 102, 0, 0.2);
+}
+
+.optionChipSelected:hover {
+  background-color: #E65C00;
+  color: #FFFFFF;
+}
+
+.emptyState {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--color-text-secondary);
+  border: 1px dashed #CBD5E1;
+  border-radius: 8px;
+  background-color: #F8FAFC;
+}

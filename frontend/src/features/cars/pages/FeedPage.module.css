@@ -1,0 +1,25 @@
+.layout {
+  min-height: 100vh;
+  background-color: var(--color-bg-page);
+  display: flex;
+  flex-direction: column;
+  animation: var(--motion-page-enter);
+}
+
+.mainContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  gap: 2rem;
+  flex-grow: 1;
+  width: 100%;
+  box-sizing: border-box;
+  animation: var(--motion-surface-enter);
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 1rem;
+  }
+}

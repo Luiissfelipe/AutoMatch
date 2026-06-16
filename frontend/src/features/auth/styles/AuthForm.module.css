@@ -1,0 +1,97 @@
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-page);
+  padding: 1.5rem;
+  animation: var(--motion-page-enter);
+}
+
+.card {
+  background-color: var(--color-bg-card);
+  width: 100%;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(17, 42, 70, 0.05);
+  border: 1px solid rgba(17, 42, 70, 0.05);
+  animation: var(--motion-surface-enter);
+}
+
+.cardSmall {
+  max-width: 440px;
+}
+
+.cardMedium {
+  max-width: 500px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.header p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.errorMessage {
+  background-color: #FEE2E2;
+  color: #B91C1C;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+  animation: var(--motion-list-enter);
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--motion-interactive);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .header {
+    margin-bottom: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 1.45rem;
+  }
+}
